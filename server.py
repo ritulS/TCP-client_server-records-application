@@ -42,7 +42,7 @@ def reg_client(client_sock,Grades):
         stu_name = client_sock.recv(2048).decode()
         print("student name entered is ",stu_name)
 
-        if stu_name in Grades['Name'].to_numpy():
+        if stu_name in Grades['Name'].to_numpy() and stu_name == name:
             send(client_sock,"Yep")
 
             stu_idx = list(Grades['Name']).index(str(stu_name))#get stu index

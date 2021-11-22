@@ -49,7 +49,7 @@ if reg_status == "Y":# User is registered
         print(stu_df)
 
     elif stu_name_result == "Nope":
-        print("Student does not exist, try again.")
+        print("Cannot access this data, try again")
         client.close()
 
 
