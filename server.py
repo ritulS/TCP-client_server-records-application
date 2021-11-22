@@ -24,7 +24,7 @@ def reg_client(client_sock,Grades):
     Grades = pd.read_csv("networks_grades_df.csv",index_col=0)
     send(client_sock,"Welcome, pls enter your details:)")#intro msg
 
-    send(client_sock,"Enter Student ID/Username: ")#get username
+    send(client_sock,"Enter Student Ashoka ID: ")#get username
     name = client_sock.recv(2048).decode()
 
     send(client_sock, "Enter Password: ")#get password
@@ -38,7 +38,7 @@ def reg_client(client_sock,Grades):
         send(client_sock,'Authentication Sucessfull!') 
 
         #Ask for student name
-        send(client_sock,'Enter Student id for Student data: ')
+        send(client_sock,'Enter Student Ashoka id for Student data: ')
         stu_name = client_sock.recv(2048).decode()
         print("student name entered is ",stu_name)
 
